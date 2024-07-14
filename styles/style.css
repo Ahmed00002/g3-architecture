@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* default styles */
+:root {
+  --buttonColor: #ff900e;
+  --dark1: #131313;
+  --dark3: #424242;
+  --headerColor: rgba(255, 144, 14, 0.1);
+}
+/* default font size for rem */
+html {
+  font-size: 10px;
+}
+/* style for navigation bar */
+body {
+  font-family: "Work Sans", sans-serif;
+}
+header {
+  background-color: var(--headerColor);
+  padding: 30px 100px;
+}
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+}
+.navigation-bar h1 {
+  font-size: 3.2rem;
+}
+.nav-menu {
+  display: flex;
+}
+.nav-menu {
+  list-style-type: none;
+  font-size: 2rem;
+}
+.nav-menu li {
+  margin: 20px;
+  position: relative;
+}
+
+.nav-menu li::after {
+  content: " ";
+  background-color: var(--dark3);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  display: none;
+  transition: 3000ms;
+}
+.nav-menu li:hover::after {
+  display: block;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: var(--dark3);
+}
+/* styles for banner */
+.banner {
+  text-align: center;
+}
+.banner h1 {
+  font-size: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 2.2rem;
+  color: var(--dark1);
+}
+.banner p {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+.banner button {
+  background-color: var(--buttonColor);
+  font-size: 1.4rem;
+  color: white;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+.banner-image img {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+/* responsible for mobile */
+@media screen and (max-width: 576px) {
+  /* for default rem */
+  html {
+    font-size: 8px;
+  }
+
+  /* header, nav and banner section */
+  header {
+    padding: 30px 20px;
+  }
+  .navigation-bar {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-menu li {
+    margin: 10px;
+  }
+  .nav-menu {
+  }
+  .banner img {
+    width: 100%;
+  }
+}
+/* responsible for tablet */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  /* for default rem */
+  .html {
+    font-size: 9;
+  }
+
+  /* header, nav and banner section */
+  header {
+    padding: 30px 20px;
+  }
+  .navigation-bar {
+    /* flex-direction: column; */
+    width: 100%;
+    padding: 0 20px;
+  }
+  .nav-menu li {
+    margin: 15px;
+  }
+  .nav-menu {
+  }
+  .banner img {
+    width: 100%;
+  }
+}
