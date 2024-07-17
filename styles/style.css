@@ -9,7 +9,7 @@
 :root {
   --buttonColor: #ff900e;
   --dark1: #131313;
-  --dark3: #424242;
+  --dark3: #727272;
   --headerColor: rgba(255, 144, 14, 0.1);
 }
 
@@ -94,7 +94,7 @@ header {
 .banner button,
 .quick-list-details button {
   background-color: var(--buttonColor);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: white;
   padding: 1.5rem 4rem;
   border: none;
@@ -162,10 +162,89 @@ main {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+
 .quick-list-images img {
   width: 100%;
 }
 
+/* features section */
+.features {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.features-title {
+  margin-bottom: 2rem;
+}
+
+.features-title h1 {
+  font-size: 4.5rem;
+  border-left: 5px solid var(--buttonColor);
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: var(--dark1);
+}
+
+.features-title p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--dark3);
+}
+
+.features-card-container,
+.features-image {
+  width: 50%;
+}
+
+.features-image img {
+  width: 100%;
+}
+/* features card style */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 2rem;
+  color: var(--dark1);
+  margin-bottom: 1rem;
+}
+.card p {
+  color: var(--dark3);
+  font-size: 1.8rem;
+  text-overflow: ellipsis;
+}
+/* experience of features */
+.features-image {
+  position: relative;
+}
+.experience {
+  background: var(--buttonColor);
+  color: white;
+  padding: 4rem 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 200px;
+  left: -92px;
+  /* transform: translate(50% 50%); */
+}
+.experience h1 {
+  font-size: 3rem;
+}
+.experience p {
+  font-size: 2rem;
+}
 /* responsible for mobile */
 @media screen and (max-width: 576px) {
   /* for default rem */
@@ -214,6 +293,34 @@ main {
   .quick-list-images img {
     width: calc(100% - 20px);
   }
+  /* features section */
+  .features {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 10px;
+  }
+  .features-image {
+    width: calc(100% - 20px);
+    padding: 0;
+  }
+  .features-card-container {
+    width: calc(100% - 20px);
+    padding: 0;
+  }
+  .card {
+    width: calc(100% - 20px);
+    padding: 10px;
+  }
+  .experience {
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .features-image img {
+    width: 100%;
+  }
 }
 /* responsible for tablet */
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -245,6 +352,7 @@ main {
     padding: 0;
   }
   /* quick link section */
+
   .quick-lists {
     flex-direction: column;
     margin: 20px 0;
@@ -262,5 +370,34 @@ main {
   }
   .quick-list-images img {
     width: calc(100% - 20px);
+  }
+
+  /* features section */
+
+  .features {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 10px;
+  }
+  .features-image {
+    width: calc(100% - 20px);
+    padding: 0;
+  }
+  .features-card-container {
+    width: calc(100% - 20px);
+    padding: 20px;
+  }
+  .card {
+    width: calc(100% - 20px);
+  }
+  .experience {
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .features-image img {
+    width: 100%;
   }
 }
